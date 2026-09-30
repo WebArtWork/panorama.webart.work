@@ -21,3 +21,6 @@ Panorama Apart-Hotel is an apart-hotel located at vul. Zarvanska, 5B in Kamianet
 
 ## Notes
 The page states several details are not yet confirmed: exact apartment count, room categories and pricing, kitchen equipment (stove, microwave, fridge, kettle, coffee maker, dishware), crib/high chair/kids' menu for family rooms, guaranteed panoramic views, parking capacity/reservation/EV charging, and a dedicated remote-work space. Email, official website, and Instagram are also listed as not confirmed.
+
+## Forms
+The `stay-request` form posts to HotelOS (hotel `kp-panorama`); phone is the only required field. No service forms (no verified services beyond accommodation).

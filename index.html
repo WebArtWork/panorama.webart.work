@@ -88,6 +88,15 @@
       .gallery{grid-template-columns:1fr;grid-template-rows:auto}.gallery figure,.gallery figure:first-child{grid-column:auto;height:210px}.footer-grid{grid-template-columns:1fr}.footer-bottom{flex-direction:column;gap:7px}
       .mobile-sticky{display:grid;grid-template-columns:1fr 1fr;position:fixed;bottom:0;left:0;right:0;background:#fff;padding:9px;gap:8px;z-index:40;border-top:1px solid var(--line)}
       .mobile-sticky a{text-align:center;padding:11px;border-radius:9px;font-weight:800}.mobile-sticky a:first-child{background:var(--blue);color:#fff}.mobile-sticky a:last-child{background:var(--grey);color:var(--graphite)}}
+    .request-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:60px;align-items:start}.request-phone{display:inline-block;margin-top:22px;font:800 clamp(1.4rem,2.6vw,1.9rem) var(--serif);color:var(--blue)}
+    .request-form{display:grid;grid-template-columns:1fr 1fr;gap:16px 14px;padding:32px;background:var(--grey);border-radius:16px}
+    .field{display:grid;gap:6px;align-content:start;min-width:0;font-size:.8rem;font-weight:700}.field.full{grid-column:1/-1}.field small{font-weight:400;color:var(--muted)}
+    .field input,.field select,.field textarea{width:100%;min-width:0;min-height:50px;padding:11px 14px;border:1px solid var(--line);border-radius:12px;background:#fff;color:var(--graphite);font:400 1rem var(--sans)}
+    .field textarea{min-height:110px;resize:vertical}.field textarea:focus-visible{outline:3px solid var(--terracotta);outline-offset:3px}.field [aria-invalid=true]{border-color:var(--terracotta);border-width:2px}
+    [data-error-for]{font-weight:700;color:#a4552a}[data-error-for]:empty{display:none}.trap{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+    .request-foot{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:center;gap:14px}.request-foot .btn[disabled]{opacity:.6;cursor:wait;transform:none}.request-note{flex:1;min-width:200px;margin:0;color:var(--muted);font-size:.8rem}
+    [data-status]{grid-column:1/-1;margin:0;padding:14px 16px;border-radius:12px;border-left:4px solid var(--sage);background:#fff;font-size:.92rem}[data-status]:empty{display:none}[data-status][data-state=error]{border-left-color:var(--terracotta)}[data-status] a{font-weight:800;text-decoration:underline}
+    @media(max-width:980px){.request-grid{grid-template-columns:1fr;gap:32px}}@media(max-width:600px){.request-form{grid-template-columns:1fr;padding:20px 16px}}
   </style>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"LodgingBusiness","name":"Panorama Apart-Hotel","image":"https://panorama.webart.work/images/hero.jpg","address":{"@type":"PostalAddress","streetAddress":"вул. Зарванська, 5Б","addressLocality":"Кам’янець-Подільський","addressCountry":"UA"},"telephone":"+380974744562","url":"https://panorama.webart.work/","amenityFeature":[{"@type":"LocationFeatureSpecification","name":"Kitchen","value":true},{"@type":"LocationFeatureSpecification","name":"Private bathroom","value":true},{"@type":"LocationFeatureSpecification","name":"Family rooms","value":true},{"@type":"LocationFeatureSpecification","name":"Terrace","value":true},{"@type":"LocationFeatureSpecification","name":"Air conditioning","value":true},{"@type":"LocationFeatureSpecification","name":"Free Wi-Fi","value":true},{"@type":"LocationFeatureSpecification","name":"Free on-site parking","value":true}],"aggregateRating":{"@type":"AggregateRating","ratingValue":"9.4","bestRating":"10","reviewCount":"537"}}</script>
 </head>
@@ -108,8 +117,9 @@
     <section class="section location" id="contacts"><div class="wrap location-grid"><div class="map-card"><iframe src="https://www.google.com/maps?q=Panorama+Apart-Hotel,+вул.+Зарванська+5Б,+Кам’янець-Подільський&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Карта: Panorama Apart-Hotel, вул. Зарванська, 5Б, Кам’янець-Подільський"></iframe></div><div class="contact-card"><span class="eyebrow">Контакти</span><h2 style="font:800 clamp(1.9rem,4vw,2.7rem)/1.05 var(--serif);margin:.2em 0">Panorama</h2><a class="big" href="tel:+380974744562">+38 097 474 45 62</a><dl><dt>Адреса</dt><dd>вул. Зарванська, 5Б, Кам’янець-Подільський</dd><dt>Email / сайт / Instagram</dt><dd>Не підтверджено</dd><dt>Заїзд / виїзд</dt><dd>Уточніть телефоном</dd></dl></div></div></section>
     <section class="section" id="gallery"><div class="wrap"><span class="eyebrow">Галерея</span><h2>Подивіться Panorama</h2><div class="gallery reveal-group"><figure class="reveal-item"><img src="images/hero.jpg" alt="Ілюстративний вигляд апартаменту" loading="lazy"></figure><figure class="reveal-item"><img src="images/kitchen.jpg" alt="Ілюстративна кухня" loading="lazy"></figure><figure class="reveal-item"><img src="images/terrace.jpg" alt="Ілюстративна тераса" loading="lazy"></figure><figure class="reveal-item"><img src="images/family.jpg" alt="Ілюстративний сімейний номер" loading="lazy"></figure></div><p class="gallery-note">Зображення поки ілюстративні. Реальні фото апартаментів, кухні, тераси та паркування буде додано після зйомки на місці.</p></div></section>
     <section class="section rating-section"><span class="eyebrow">Оцінка гостей</span><h2 style="font:800 clamp(1.8rem,3.5vw,2.6rem)/1.1 var(--serif);margin:.2em 0">Актуальна оцінка на Booking.com</h2><div class="rating-badge"><b>9.4</b><span>з 10</span></div><p class="rating-count">На основі 537 відгуків на Booking.com</p></section>
-    <section class="section booking" id="booking"><div class="wrap" style="text-align:center"><span class="eyebrow">Контакти</span><h2>Зв’яжіться з нами</h2><p class="lead" style="margin:0 auto">Зателефонуйте, щоб уточнити наявність, тип апартаменту та вартість.</p><div class="contact-card" style="max-width:420px;margin:30px auto 0"><a class="big" href="tel:+380974744562">+38 097 474 45 62</a><dl><dt>Адреса</dt><dd>вул. Зарванська, 5Б, Кам’янець-Подільський</dd></dl><a class="btn terracotta" href="https://www.google.com/maps/search/?api=1&query=Panorama+Apart-Hotel,+вул.+Зарванська+5Б,+Кам’янець-Подільський" target="_blank" rel="noopener">Відкрити у Google Maps ↗</a></div></div></section>
-    <section class="final"><img src="images/hero.jpg" alt="Panorama Apart-Hotel, ілюстративне зображення"><div><span class="eyebrow" style="color:#a9cbe0">Кухня · Тераса · Безкоштовне паркування · Booking 9.4</span><h2>Залишайтеся так, як зручно вам</h2><p>Кухня, Wi-Fi, кондиціонування, тераса та безкоштовне паркування.</p><div class="actions"><a class="btn primary" href="#booking">Контакти</a><a class="btn" style="border-color:#fff;color:#fff" href="tel:+380974744562">+38 097 474 45 62</a></div></div></section>
+    <section class="section booking" id="booking"><div class="wrap" style="text-align:center"><span class="eyebrow">Контакти</span><h2>Зв’яжіться з нами</h2><p class="lead" style="margin:0 auto">Зателефонуйте, щоб уточнити наявність, тип апартаменту та вартість.</p><div class="contact-card" style="max-width:420px;margin:30px auto 0"><a class="big" href="tel:+380974744562">+38 097 474 45 62</a><dl><dt>Адреса</dt><dd>вул. Зарванська, 5Б, Кам’янець-Подільський</dd></dl><div class="actions" style="justify-content:center"><a class="btn terracotta" href="https://www.google.com/maps/search/?api=1&query=Panorama+Apart-Hotel,+вул.+Зарванська+5Б,+Кам’янець-Подільський" target="_blank" rel="noopener">Відкрити у Google Maps ↗</a><a class="btn" href="#stay-request">Залишити запит</a></div></div></div></section>
+    <section class="section" id="stay-request"><div class="wrap request-grid"><div><span class="eyebrow">Запит на проживання</span><h2>Залиште номер, ми передзвонимо</h2><p class="lead">Вкажіть телефон і, за бажанням, дати поїздки. Ми зателефонуємо, щоб уточнити наявність, формат апартаменту та вартість.</p><a class="request-phone" href="tel:+380974744562">+38 097 474 45 62</a></div><form class="request-form" data-hotelos data-form-name="Запит на проживання" novalidate><label class="field full">Телефон<small>Обов’язково, щоб ми могли передзвонити</small><input name="phone" type="tel" autocomplete="tel" inputmode="tel" required><span data-error-for="phone"></span></label><label class="field">Ім’я<input name="name" type="text" autocomplete="name" maxlength="200"></label><label class="field">Гостей<input name="guests" type="number" min="1" max="50" inputmode="numeric"></label><label class="field">Дата заїзду<input name="checkIn" type="date"></label><label class="field">Дата виїзду<input name="checkOut" type="date"><span data-error-for="checkOut"></span></label><label class="field full">Побажання<textarea name="message" maxlength="5000"></textarea></label><label class="trap" aria-hidden="true">Не заповнюйте<input name="website" type="text" tabindex="-1" autocomplete="off"></label><div class="request-foot"><button class="btn primary" type="submit">Надіслати запит</button><p class="request-note">Номер використаємо лише для відповіді на цей запит.</p></div><p data-status role="status" aria-live="polite"></p></form></div></section>
+    <section class="final"><img src="images/hero.jpg" alt="Panorama Apart-Hotel, ілюстративне зображення"><div><span class="eyebrow" style="color:#a9cbe0">Кухня · Тераса · Безкоштовне паркування · Booking 9.4</span><h2>Залишайтеся так, як зручно вам</h2><p>Кухня, Wi-Fi, кондиціонування, тераса та безкоштовне паркування.</p><div class="actions"><a class="btn primary" href="#stay-request">Залишити запит</a><a class="btn" style="border-color:#fff;color:#fff" href="tel:+380974744562">+38 097 474 45 62</a></div></div></section>
   </main>
   <footer><div class="wrap"><div class="footer-grid"><div class="footer-brand"><strong>PANORAMA APART-HOTEL</strong><small>Проживання · Кухня · Відпочинок</small></div><div class="footer-col"><b>Проживання</b><a href="#apartments">Апартаменти</a><a href="#family">Сімейні номери</a><a href="#booking">Контакти</a></div><div class="footer-col"><b>Комфорт</b><a href="#kitchen">Кухня</a><a href="#contacts">Wi-Fi · кондиціонер</a></div><div class="footer-col"><b>Назовні</b><a href="#terrace">Тераса</a><a href="#parking">Паркування</a></div><div class="footer-col"><b>Інформація</b><a href="#gallery">Галерея</a><a href="#contacts">Карта й контакти</a></div></div><div class="footer-bottom"><span>вул. Зарванська, 5Б · Кам’янець-Подільський</span><span>+38 097 474 45 62</span></div></div></footer>
   <div class="mobile-sticky"><a href="tel:+380974744562">Зателефонувати</a><a href="#booking">Контакти</a></div>
@@ -126,5 +136,152 @@
       }
     }
   </script>
+<script type="module">
+// HotelOS site forms. Paste this whole block into the site's index.html as an inline module
+// script right before the closing body tag, and set the three constants below. Never put a
+// literal closing script tag inside this file: it would end the inline script early.
+// Contract (hotelos.webart.work/CRM.md → Submission data contract, firestore.rules):
+// - every form is <form data-hotelos data-form-name="…" novalidate> inside a <section id="{formId}">;
+//   the section id IS the formId (stable slug, e.g. stay-request, sauna-request) and the CRM
+//   links to SITE + '#' + formId, so the link scrolls to the start of that section;
+// - fields are matched by name: phone (required), name, email, message, checkIn, checkOut, guests,
+//   roomType, date, time, service; a [data-genders] box renders one select per guest (hostels);
+// - errors go to [data-error-for="<name>"], the result to [data-status]; `website` is a honeypot.
+const HOTEL_ID = 'kp-panorama'; // Firestore hotels/{id}: 'kp-' + site folder name
+const SITE = 'https://panorama.webart.work/'; // from the site's CNAME
+const PHONE = '+38 097 474 45 62'; // shown when sending fails
+
+const FIREBASE = {
+	apiKey: 'AIzaSyBeSB5EuC4BBSpmCGA3Pjk7dD_JV2SdcSQ',
+	authDomain: 'hotel-upwork.firebaseapp.com',
+	projectId: 'hotel-upwork',
+	appId: '1:40129364672:web:c9659550ebf0f1d8a36325',
+};
+const SDK = 'https://www.gstatic.com/firebasejs/12.19.0/';
+const TEXT_FIELDS = ['name', 'email', 'message', 'checkIn', 'checkOut', 'date', 'time', 'roomType', 'service'];
+const today = new Date(Date.now() - new Date().getTimezoneOffset() * 6e4).toISOString().slice(0, 10);
+
+let db;
+async function firestore() {
+	if (db) return db;
+	// Loaded on first submit only, so the page itself stays light.
+	const [{ initializeApp }, lite] = await Promise.all([import(SDK + 'firebase-app.js'), import(SDK + 'firebase-firestore-lite.js')]);
+	db = { lite, store: lite.getFirestore(initializeApp(FIREBASE)) };
+	return db;
+}
+
+function setup(form) {
+	const formId = form.closest('section[id]')?.id;
+	if (!formId) return console.error('HotelOS form needs a parent <section id="formId">', form);
+	const field = (name) => form.elements.namedItem(name);
+	const statusEl = form.querySelector('[data-status]');
+	const submit = form.querySelector('[type=submit]');
+	const submitLabel = submit.textContent;
+	const gendersBox = form.querySelector('[data-genders]');
+
+	for (const name of ['checkIn', 'checkOut', 'date']) if (field(name)) field(name).min = today;
+	if (field('checkIn') && field('checkOut')) {
+		field('checkIn').addEventListener('change', () => {
+			const checkIn = field('checkIn').value;
+			field('checkOut').min = checkIn || today;
+			if (field('checkOut').value && field('checkOut').value <= checkIn) field('checkOut').value = '';
+		});
+	}
+
+	// Hostels: one gender select per guest, kept in sync with the guests count.
+	function renderGenders() {
+		if (!gendersBox) return;
+		const count = Math.min(Math.max(parseInt(field('guests')?.value, 10) || 1, 1), 20);
+		const current = [...gendersBox.querySelectorAll('select')].map((select) => select.value);
+		gendersBox.replaceChildren(
+			...Array.from({ length: count }, (_, i) => {
+				const label = document.createElement('label');
+				label.textContent = `Гість ${i + 1}`;
+				const select = document.createElement('select');
+				select.name = 'gender';
+				select.required = true;
+				select.innerHTML = '<option value="">Стать</option><option value="female">Жінка</option><option value="male">Чоловік</option>';
+				select.value = current[i] ?? '';
+				label.append(select);
+				return label;
+			}),
+		);
+	}
+	if (gendersBox) {
+		field('guests')?.addEventListener('input', renderGenders);
+		renderGenders();
+	}
+
+	function setError(name, text) {
+		const input = field(name);
+		if (input instanceof Element) input.setAttribute('aria-invalid', text ? 'true' : 'false');
+		const slot = form.querySelector(`[data-error-for="${name}"]`);
+		if (slot) slot.textContent = text;
+	}
+
+	function showStatus(state, html) {
+		statusEl.dataset.state = state;
+		statusEl.innerHTML = html;
+	}
+
+	form.addEventListener('submit', async (event) => {
+		event.preventDefault();
+		showStatus('', '');
+		const phone = field('phone').value.trim();
+		const digits = phone.replace(/\D/g, '');
+		setError('phone', digits.length < 9 || digits.length > 15 ? 'Вкажіть номер телефону, щоб ми могли передзвонити.' : '');
+		if (field('checkIn') && field('checkOut')) {
+			const { value: checkIn } = field('checkIn');
+			const { value: checkOut } = field('checkOut');
+			setError('checkOut', checkIn && checkOut && checkOut <= checkIn ? 'Дата виїзду має бути пізніше за дату заїзду.' : '');
+		}
+		const genderSelects = gendersBox ? [...gendersBox.querySelectorAll('select')] : [];
+		if (gendersBox) {
+			const missing = genderSelects.some((select) => !select.value);
+			for (const select of genderSelects) select.setAttribute('aria-invalid', missing && !select.value ? 'true' : 'false');
+			const slot = form.querySelector('[data-error-for="genders"]');
+			if (slot) slot.textContent = missing ? 'Вкажіть стать кожного гостя, щоб ми підібрали місця.' : '';
+		}
+		const invalid = form.querySelector('[aria-invalid=true]');
+		if (invalid) return invalid.focus();
+
+		const thanks = `Дякуємо! Ми зателефонуємо на ${phone.replace(/</g, '')} найближчим часом.`;
+		// Bots fill the hidden field: pretend success, send nothing.
+		if (field('website')?.value) {
+			form.reset();
+			renderGenders();
+			return showStatus('ok', thanks);
+		}
+
+		const lead = { phone, formId, formName: form.dataset.formName, site: SITE, hotelId: HOTEL_ID };
+		for (const name of TEXT_FIELDS) {
+			const value = field(name)?.value?.trim();
+			if (value) lead[name] = value;
+		}
+		const guests = parseInt(field('guests')?.value, 10);
+		if (guests >= 1 && guests <= 50) lead.guests = guests;
+		if (genderSelects.length) lead.genders = genderSelects.map((select) => select.value);
+
+		submit.disabled = true;
+		submit.textContent = 'Надсилаємо…';
+		try {
+			const { lite, store } = await firestore();
+			await lite.addDoc(lite.collection(store, 'submissions'), { ...lead, status: 'new', history: [], createdAt: lite.serverTimestamp() });
+			form.reset();
+			if (field('checkOut')) field('checkOut').min = today;
+			renderGenders();
+			showStatus('ok', thanks);
+		} catch (error) {
+			console.error(error);
+			showStatus('error', `Не вдалося надіслати запит. Зателефонуйте нам: <a href="tel:${PHONE.replace(/[^\d+]/g, '')}">${PHONE}</a>.`);
+		} finally {
+			submit.disabled = false;
+			submit.textContent = submitLabel;
+		}
+	});
+}
+
+document.querySelectorAll('form[data-hotelos]').forEach(setup);
+</script>
 </body>
 </html>
